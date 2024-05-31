@@ -32,7 +32,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'shortener',
-    'jazzmin'
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
