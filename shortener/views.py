@@ -7,7 +7,3 @@ def redirect_url(request, short_code):
     url.click_count += 1
     url.save()
     return redirect(url.original_url)
-
-
-def redirect_to_admin(request):
-    return redirect('admin:index')
