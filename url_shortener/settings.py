@@ -32,7 +32,6 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'shortener',
-    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
@@ -101,25 +100,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
-JAZZMIN_SETTINGS = {
-    "site_title": "URL Shortener Admin",
-    "site_header": "URL Shortener",
-    "site_brand": "URL Shortener",
-    "welcome_sign": "Welcome to the URL Shortener Admin Panel",
-    "show_sidebar": True,
-    "navigation_expanded": True,
-    "icons": {
-        "auth": "fas fa-users-cog",
-        "auth.user": "fas fa-user",
-        "auth.Group": "fas fa-users",
-        "shortener.URL": "fas fa-link",
-    },
-    "custom_css": None,
-    "custom_js": None,
-    "show_ui_builder": False,
-}
 
 
 # Internationalization
