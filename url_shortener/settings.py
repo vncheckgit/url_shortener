@@ -118,6 +118,52 @@ USE_L10N = True
 
 USE_TZ = True
 
+JAZZMIN_SETTINGS = {
+    "site_title": "URL Shortener Admin",
+    "site_header": "URL Shortener",
+    "site_brand": "URL Shortener",
+    "welcome_sign": "Welcome to the URL Shortener Admin Portal",
+    "search_model": "auth.User",
+    "user_avatar": None,
+    "topmenu_links": [
+        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"model": "auth.User"},
+        {"app": "url"},
+    ],
+    "usermenu_links": [
+        {"name": "Support", "url": "https://support.example.com", "new_window": True},
+    ],
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "hide_models": [],
+    "order_with_respect_to": ["auth", "url", "url.URL", "url.QRCode"],
+    "custom_links": {
+        "url": [{
+            "name": "Make QR Code",
+            "url": "make_qr_code",
+            "icon": "fas fa-qrcode",
+            "permissions": ["url.add_qrcode"]
+        }]
+    },
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "url.URL": "fas fa-link",
+        "url.QRCode": "fas fa-qrcode",
+    },
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
+    "related_modal_active": False,
+    "custom_css": None,
+    "custom_js": None,
+    "use_google_fonts_cdn": True,
+    "show_ui_builder": True,
+    "changeform_format": "horizontal_tabs",
+    "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
+    "language_chooser": True,
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
